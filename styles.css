@@ -1,0 +1,154 @@
+:root {
+  /*## Colors
+    ### Primary*/
+  --color-primary: hsl(179, 62%, 43%);
+  --color-primary-accent: hsl(179, 71%, 44%);
+  --color-secondary: hsl(71, 73%, 54%);
+
+  /*### Neutral*/
+  --color-body: hsl(204, 43%, 93%);
+  --color-faded: hsla(203, 44%, 93%, 0.6);
+  --color-text: hsl(218, 22%, 67%);
+  --white: #fff;
+
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  font-family: "Karla";
+  height: 100dvh;
+  width: 100dvw;
+  background-color: var(--color-body);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main {
+  margin-bottom: auto;
+  margin-top: auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "card1"
+    "card2";
+  width: 83dvw;
+  max-width: 355px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 50px 5px var(--color-text);
+}
+
+header {
+  color: var(--color-text);
+  grid-area: header;
+  background-color: var(--white);
+  padding: 2.5rem;
+}
+
+header p {
+  line-height: 2rem;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+h2 {
+  color: var(--color-secondary);
+  margin: 2rem 0;
+  font-weight: 700;
+}
+.card {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 2rem 2.5rem;
+}
+
+.card1 {
+  background-color: var(--color-primary);
+  grid-area: card1;
+}
+
+.card2 {
+  background-color: var(--color-primary-accent);
+}
+h3 {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 1rem 0 1.8rem;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+.faded {
+  color: var(--color-faded);
+  font-weight: 100;
+}
+
+.thin {
+  color: var(--color-body);
+  font-weight: 200;
+  margin: 0.2rem 0;
+}
+
+button {
+  border: none;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color: var(--color-secondary);
+  width: 100%;
+  margin: 2rem 0 0.5rem;
+  height: 4.5rem;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 769px) {
+  main {
+    max-width: 640px;
+    grid-template-areas:
+      "header header"
+      "card1 card2";
+  }
+  .card {
+    padding: 3rem;
+  }
+  header p {
+    width: 80%;
+  }
+  button {
+    width: 85%;
+  }
+}
